@@ -6,7 +6,30 @@
         xmlns:local="clr-namespace:Sample_WPFBrowser_MouseMove"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+    <Grid x:Name="mainWPF" MouseMove="mainWPF_MouseMove">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="174*"/>
+            <ColumnDefinition Width="109*"/>
+            <ColumnDefinition Width="122*"/>
+            <ColumnDefinition Width="112*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="247*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="button" Grid.Row="0" Grid.Column="0" Content="Open browser" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Height="26" Click="button_Click"/>
+        <Label x:Name="label" Grid.Row="0" Grid.Column="1" Content="All" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label x:Name="label1" Grid.Row="1" Grid.Column="1" Content="WPF component" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="99"/>
+
+        <Label x:Name="allLabelX" Grid.Row="0" Grid.Column="2" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="80"/>
+        <Label x:Name="allLabelY" Grid.Row="0" Grid.Column="3" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="84"/>
+
+
+        <Label x:Name="labelX" Grid.Row="1" Grid.Column="2" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="80"/>
+        <Label x:Name="labelY" Grid.Row="1" Grid.Column="3" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="84"/>
+
+        <Grid x:Name="WPFWeb" Grid.Row="2" Grid.ColumnSpan="4" MouseMove="WPFWeb_MouseMove" Grid.RowSpan="2"/>
+
     </Grid>
 </Window>
